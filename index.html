@@ -7,6 +7,7 @@
     <title>Ryoko Hughes</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -15,7 +16,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="wow fadeIn">
         <div class="container">
             <h1 id="header-logo"><a href="index.html">Ryoko Hughes</a></h1>
             <nav>
@@ -34,35 +35,35 @@
 
     <!-- Hero -->
     <section class="hero">
-        <img src="images/logo.png" alt="Seal" class="hero-logo">
-        <h2 class="tagline">Hello, I am Ryoko Hughes! I am a <strong>UX/UI Designer</strong> & <strong>Front-End Developer</strong> with many years of industry experience, from small agencies to large enterprises delivering various projects.</h2>
+        <img src="images/logo.png" alt="Seal" class="hero-logo wow fadeInDown" data-wow-duration="1s" data-wow-delay=".25s">
+        <h2 class="tagline wow fadeInUp" data-wow-delay=".5s">Hello, I am Ryoko Hughes! I am a <strong>UX/UI Designer</strong> & <strong>Front-End Developer</strong> with many years of industry experience, from small agencies to large enterprises delivering various projects.</h2>
     </section>
 
     <!-- Content -->
     <main class="index-content">
         <div class="container">
-            <div class="port-thumb tabbit">
+            <div class="port-thumb tabbit wow fadeIn" data-wow-delay="1s">
                 <a href="work-tabbit.html" class="port-thumb-link">
                     <img src="images/thumb-tabbit.png" alt="Tabbit" class="port-thumb-img">
                 </a>
                 <p class="port-thumb-desc">Tabbit - Mobile App</p>
             </div>
 
-            <div class="port-thumb cm">
+            <div class="port-thumb cm wow fadeIn" data-wow-delay="1.25s">
                 <a href="work-cm.html">
                     <img src="images/thumb-npo.png" alt="NPO" class="port-thumb-img">
                 </a>
                 <p class="port-thumb-desc">Cooking Matters - RWD Website</p>
             </div>
 
-            <div class="port-thumb gdol">
+            <div class="port-thumb gdol wow fadeIn" data-wow-delay="1.5s">
                 <a href="work-gdol.html">
                     <img src="images/thumb-gdol.png" alt="GDOL" class="port-thumb-img">
                 </a>
                 <p class="port-thumb-desc">GDOL - RWD Website</p>
             </div>
 
-            <div class="port-thumb mp">
+            <div class="port-thumb mp wow fadeIn" data-wow-delay="1.75s">
                 <a href="work-mp.html">
                     <img src="images/thumb-moviepath.png" alt="Movie Path" class="port-thumb-img">
                 </a>
@@ -76,5 +77,23 @@
     <footer>
         <p class="copyright">&copy; 2021 RyokoHughes All Rights Reserved.</p>
     </footer>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset: 100,
+            callback: function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+      </script>
 </body>
 </html>
