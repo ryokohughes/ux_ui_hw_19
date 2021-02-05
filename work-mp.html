@@ -7,6 +7,7 @@
     <title>Ryoko Hughes : Movie Path</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -15,7 +16,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="wow fadeIn" data-wow-delay=".5s">
         <div class="container">
             <h1 id="header-logo"><a href="index.html">Ryoko Hughes</a></h1>
             <nav>
@@ -35,8 +36,8 @@
     <!-- Title -->
     <section class="title">
         <div class="container bottom-border">
-            <h2 class="page-title">Movie Path</h2>
-            <p class="page-sub-title">As a team, we decided to create a movie app. I did User Research and Wireframing.</p>
+            <h2 class="page-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".25s">Movie Path</h2>
+            <p class="page-sub-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">As a team, we decided to create a movie app. I did User Research and Wireframing.</p>
         </div>
     </section>
 
@@ -98,5 +99,23 @@
     <footer>
         <p class="copyright">&copy; 2021 RyokoHughes All Rights Reserved.</p>
     </footer>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset: 100,
+            callback: function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+      </script>
 </body>
 </html>

@@ -208,7 +208,8 @@ CONTENT
 .port-thumb.mp a:hover, .thumb-bg.mp {background: #92afbf;}
 .port-thumb.cm a:hover, .thumb-bg.cm {background: #c6d39e;}
 .port-thumb.gdol a:hover, .thumb-bg.gdol {background: #f0cbab;}
-.thumb-bg.seal-portrait {padding: 15px 30px; background: #cbdee0;}
+.thumb-bg.seal-portrait {padding: 25px 30px; background: #cbdee0;}
+.skill-list {columns: 2;}
 
 .btn-right {
 	margin: 10px 0 40px;

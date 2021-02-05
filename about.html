@@ -7,6 +7,7 @@
     <title>Ryoko Hughes : About</title>
     <link rel="shortcut icon" href="images/favicon.ico">
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -15,7 +16,7 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header class="wow fadeIn" data-wow-delay=".5s">
         <div class="container">
             <h1 id="header-logo"><a href="index.html">Ryoko Hughes </a></h1>
             <nav>
@@ -35,7 +36,7 @@
     <!-- Content -->
     <section class="title">
         <div class="container bottom-border">
-            <h2 class="page-title">About</h2>
+            <h2 class="page-title wow fadeInDown" data-wow-duration="1s" data-wow-delay=".25s">About</h2>
         </div>
     </section>
 
@@ -46,7 +47,7 @@
                 <div class="col col-6 port-overview">
                     <h5>Hello, I am Ryoko Hughes!</h5>
                     <p>I am a UX/UI Designer & Front-End Developer with many years of industry experience, from small agencies to large enterprises delivering various projects. </p>
-                    <P>I design and build pixel perfect websites, products and design systems. I love providing solutions to various problems.</p>
+                    <p>I design and build pixel perfect websites, products and design systems. I love providing solutions to various problems.</p>
                 </div>
                 <div class="col col-6 port-thumb-img">
                     <div class="thumb-bg seal-portrait">
@@ -57,20 +58,29 @@
 
             <h3>My UX skills</h3>
             <section class="row bottom-border">
-                <div class="col col-4">
-                    <h5>USER RESEARCH</h5>
+                <div class="col col-6">
+                    <h5>User Research</h5>
                     <p>During our team project, I did a lot of Heuristic Evaluation and Annotation. I like to analyze their current website, and competitors.</p>
-                </div>
-                <div class="col col-4">
-                    <h5>USER EMPATHY</h5>
+                    <h5>User Empathy</h5>
                     <p>When we do usability testings. I tried to pay attention to the user’s reactions and figure out what problems they experienced.</p>
-                </div>
-                <div class="col col-4">
-                    <h5>QUALITATIVE INTERVIEWS</h5>
+                    <h5>Qualitative Interviews</h5>
                     <p>Interview questions can be repetitive. I tried to ask additional questions to get more insight.</p>
                 </div>
+                <div class="col col-6">
+                    <h5>Tools I use</h5>
+                    <ul class="skill-list">
+                        <li>Adobe XD</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe InDesign</li>
+                        <li>Adobe Fresco</li>
+                        <li>Figma</li>
+                        <li>InVision </li>
+                        <li>Google Slide </li>
+                        <li>Miro</li>
+                    </ul>
+                </div>
             </section>
-            
         </div>
     </main>
 
@@ -78,5 +88,23 @@
     <footer>
         <p class="copyright">&copy; 2021 RyokoHughes All Rights Reserved.</p>
     </footer>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>
+        wow = new WOW(
+          {
+            animateClass: 'animated',
+            offset: 100,
+            callback: function(box) {
+              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+            }
+          }
+        );
+        wow.init();
+        document.getElementById('moar').onclick = function() {
+          var section = document.createElement('section');
+          section.className = 'wow fadeInDown';
+          this.parentNode.insertBefore(section, this);
+        };
+      </script>
 </body>
 </html>
