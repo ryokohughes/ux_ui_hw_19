@@ -82,18 +82,15 @@
         wow = new WOW(
           {
             animateClass: 'animated',
-            offset: 100,
-            callback: function(box) {
-              console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-            }
+            offset: 0
           }
         );
         wow.init();
-        document.getElementById('moar').onclick = function() {
-          var section = document.createElement('section');
-          section.className = 'wow fadeInDown';
-          this.parentNode.insertBefore(section, this);
-        };
+      </script>
+      <!-- HW19 Requirement -->
+      <script>
+        let msg = 'I\'m adding a nice Java Script';
+        console.log(msg);
       </script>
 </body>
 </html>
