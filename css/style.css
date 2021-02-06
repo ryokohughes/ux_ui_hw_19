@@ -109,7 +109,7 @@ nav {display: flex;}
 .nav-social-icons img {width: 32px;}
 .header-nav li a:hover {color: #0288b9; transform: translate(0px, -10px);}
 .header-nav li.nav-social-icons a:hover img {filter: invert(41%) sepia(94%) saturate(4379%) hue-rotate(174deg) brightness(90%) contrast(98%);}
- 
+/* .header-nav li.current a {text-decoration:underline;} */
 
 /* ------------------------------
 HERO / TITLE
@@ -277,5 +277,6 @@ MEDIA QUERIES
 	.btn-right a.icon-button {margin: 0; padding: 0 20px;}
 	.btn-icon-img {display: none;}
 	.port-thumb-img {order: 1; margin-bottom: 20px;}
+	.index-content .port-thumb-img {margin-bottom: 0;}
 	.port-overview {order: 2;}
 }
